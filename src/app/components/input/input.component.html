@@ -1,0 +1,26 @@
+<form (ngSubmit)="onSubmit()">
+    <input
+      type="text"
+      [(ngModel)]="sample"
+      (blur)="onInputChange(sample)"
+      placeholder="Enter value"
+      name="sample"
+    />
+    <input
+      type="number"
+      [(ngModel)]="value"
+      (blur)="onValueChange(value)"
+      placeholder="Enter value"
+      name="value"
+    />
+    <select [(ngModel)]="selectedUnit" (ngModelChange)="onUnitChange($event)" name="selectedUnit">
+      <option value="">Select unit</option>
+      <option *ngFor="let unit of units" [value]="unit">{{ unit }}</option>
+    </select>
+    <button type="submit">Save Value</button>
+</form>
+<div>
+    <h4>Converted Value</h4>
+    <div> {{standardUnit}}</div>
+    <div> {{convertedValue}}</div>
+</div>
