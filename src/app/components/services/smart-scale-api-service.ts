@@ -8,7 +8,7 @@ import { ConversionResponse } from '../models/ConversionResponse';
   providedIn: 'root',
 })
 export class SmartScaleApiService {
-  private API_BASE_URL = 'http://localhost:5256/api/units'; // Replace with the actual SmartScale API base URL
+  private API_BASE_URL = 'https://localhost:7100/api/units'; // Replace with the actual SmartScale API base URL
 
   constructor(private http: HttpClient) {}
 
@@ -19,7 +19,7 @@ export class SmartScaleApiService {
 
   getConvertedUnits(conversionRequest: ConversionRequest ):Observable<ConversionResponse> {
     const apiUrl = `${this.API_BASE_URL}/convert`;
-    return this.http.post<ConversionResponse>(apiUrl, { params: { fromUnit : conversionRequest.fromUnit, value : conversionRequest.value } });
+    return this.http.post<ConversionResponse>(apiUrl, conversionRequest);
   }
 
   saveValue(value: number): Observable<string> {

@@ -1,0 +1,82 @@
+/* Center the entire container */
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  min-height: 88vh;
+}
+
+/* Form container styling */
+.form-container {
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  content: center;
+  justify-content: center;
+}
+
+/* Input and dropdown styling */
+.p-inputtext,
+.p-dropdown {
+  width: 100%;
+}
+
+/* Converted value section */
+.converted-value-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.converted-value {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+h3 {
+  margin-bottom: 1rem;
+  color: #333333;
+}
+
+/* Loading overlay */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* Spinner */
+.spinner {
+  border: 4px solid #f3f3f3; /* Light gray */
+  border-top: 4px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+/* Spinner animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
