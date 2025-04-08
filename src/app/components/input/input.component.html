@@ -20,20 +20,6 @@
       />
     </div>
 
-    <!-- Number Input -->
-    <div class="p-col-12 p-md-4">
-      <label for="value" class="p-text-bold">Value</label>
-      <input
-        id="value"
-        type="number"
-        [(ngModel)]="sampleInputValue"
-        (keydown.enter)="onValueChange(sampleInputValue)"
-        placeholder="Enter number"
-        name="value"
-        class="p-inputtext p-component"
-      />
-    </div>
-
     <!-- Dropdown for Units -->
     <div class="p-col-12 p-md-4">
       <label for="selectedUnit" class="p-text-bold">
@@ -51,6 +37,20 @@
         <option value="">Select unit</option>
         <option *ngFor="let unit of units" [value]="unit">{{ unit }}</option>
       </select>
+    </div>
+
+    <!-- Number Input -->
+    <div class="p-col-12 p-md-4">
+      <label for="value" class="p-text-bold">Value</label>
+      <input
+        id="value"
+        type="number"
+        [(ngModel)]="sampleInputValue"
+        (keydown.enter)="onValueChange(sampleInputValue)"
+        placeholder="Enter number"
+        name="value"
+        class="p-inputtext p-component"
+      />
     </div>
   </form>
 
